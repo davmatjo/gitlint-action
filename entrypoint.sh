@@ -14,14 +14,6 @@ while [[ $# -gt 0 ]]; do
 done
 
 set -- "${ARGS[@]}"
-
-
-echo "okay"
-echo "$1"
-echo "okay2"
-echo "$2"
-echo "$3"
-echo "$@"
-echo "$*"
 git config --global --add safe.directory /github/workspace
-gitlint "$@"
+
+gitlint "$@" >> $GITHUB_STEP_SUMMARY
