@@ -1,5 +1,21 @@
 #!/bin/sh
 
+ARGS=()
+
+while [[ $# -gt 0 ]]; do
+  if [ -z "$2" ]
+  then
+    shift
+    shift
+  else
+    ARGS+=("$1")
+    shift
+  fi
+done
+
+set -- "${ARGS[@]}"
+
+
 echo "okay"
 echo "$1"
 echo "okay2"
