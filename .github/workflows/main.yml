@@ -1,0 +1,10 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: Gitlint
+    steps:
+      - name: Gitlint step
+        id: gitlint
+        uses: davmatjo/gitlint-action@main
