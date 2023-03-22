@@ -1,5 +1,5 @@
 FROM jorisroovers/gitlint:0.19.1
 
-COPY entrypoint.sh .
+COPY entrypoint.sh /gitlint
 
-ENTRYPOINT ["/bin/sh", "-c", "entrypoint.sh"]
+ENTRYPOINT ["/bin/sh", "-c", "/gitlint/entrypoint.sh"]
