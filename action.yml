@@ -35,10 +35,18 @@ runs:
   using: docker
   image: Dockerfile
   args:
-    - --target /github/${{ inputs.target }}
-    - -C ${{ inputs.config-file }}
-    - -c ${{ inputs.config-flags }}
-    - --commits ${{ inputs.commits }}
-    - -e ${{ inputs.extra }}
-    - --ignore ${{ inputs.ignore }}
-    - --contrib ${{ inputs.contrib }}
+    - --target
+    - /github/${{ inputs.target }}
+    - -C
+    - ${{ inputs.config-file }}
+    - -c
+    - ${{ inputs.config-flags }}
+    - --commits
+    - ${{ inputs.commits }}
+    - -e
+    - ${{ inputs.extra }}
+    - --ignore
+    - ${{ inputs.ignore }}
+    - --contrib
+    - ${{ inputs.contrib }}
+    - --ignore-stdin
