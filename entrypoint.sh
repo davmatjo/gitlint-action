@@ -16,4 +16,6 @@ done
 set -- "${ARGS[@]}"
 git config --global --add safe.directory /github/workspace
 
-gitlint "$@" >> $GITHUB_STEP_SUMMARY
+output=$(gitlint "$@")
+
+echo "$output" >> $GITHUB_STEP_SUMMARY
