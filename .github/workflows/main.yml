@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Gitlint
     steps:
+      - name: checkout
+        uses: actions/checkout@v3
       - name: Gitlint step
         id: gitlint
         uses: davmatjo/gitlint-action@main
