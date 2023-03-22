@@ -12,7 +12,7 @@ inputs:
       used multiple times to set multiple config values.
     required: false
   config-file:
-      default: .gitlint
+      default: ""
       description: Config file location
       required: false
   commits:
